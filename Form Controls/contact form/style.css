@@ -1,0 +1,56 @@
+:root {
+    /* colors */
+    --btn-bg-clr: blue;
+    --btn-text-clr: #fff;
+
+    /* fonts */
+    --input-font-size: 1rem;
+    --label-font-size: 1rem;
+    
+    /* utilities */
+    --input-padding: 0.6rem;
+    --form-gap: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--form-gap);
+    max-width: 500px;
+}
+
+.form-controls {
+    display: flex;
+    flex-direction: column;
+}
+
+input,
+textarea {
+    padding: var(--input-padding);
+    font-size: 1rem;
+}
+input:required {
+    border: 2px solid;
+}
+
+.input:user-invalid {
+    border: 2px solid red;
+}
+
+.input:valid {
+    border: 2px solid green;
+}
+
+.btn {
+    margin-right: auto;
+    padding: 0.5em 1em;
+    background-color: var(--btn-bg-clr);
+    color: var(--btn-text-clr);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    
+}
