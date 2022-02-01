@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <form action="">
-        <div>
-            <label for="username">Username (required)</label>
-            <input type="text" name="username" id="username" autofocus autocomplete="username" required>
+    <form action="" class="login-form">
+        <div class="form-controls">
+            <label for="username" class="form-label">Username (required)</label>
+            <input type="text" name="username" id="username" class="form-input" autofocus autocomplete="username" required>
         </div>
-        <div>
-            <label for="password">Password (required)</label> 
-            <input type="password" name="password" id="password" required min="8" aria-describedby="password-minlength">
-            <small class="password-minlength">Password must be at least 8 characters.</small>
+
+        <!-- honey pot field -->
+        <label for="honeypot" class="honeypot" hidden aria-hidden="true">Keep this field blank</label>
+        <input type="text"  autocomplete="off" class="honeypot" id="honeypot" aria-hidden="true" tabindex="-1">
+        <!-- end of honey pot field -->
+
+        <div class="form-controls">
+            <label for="password" class="form-label">Password (required)</label> 
+            <input type="password" name="password" id="password" autocomplete="current-password" class="form-input" required minlength="8" aria-describedby="password-validation" required>
+            <small class="password-validation">Password must be at least 8 characters.</small>
         </div>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Login" class="btn" id="login">
     </form>
 </body>
 </html>

@@ -5,6 +5,7 @@
     --input-focus-clr: blue;
     --valid: #008000;
     --error: #ff0000;
+    --valid-input-bg-clr: #b5f3b5;
 
     /* fonts */;
     --input-font-size: 1rem;
@@ -15,11 +16,11 @@
     --form-gap: 1rem;
 }
 
-.contact-form {
+.login-form {
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     gap: var(--form-gap);
-    max-width: 500px;
 }
 
 .form-controls {
@@ -36,14 +37,6 @@
     font-size: var(--input-font-size);
 }
 
-/* input:required {
-    border: 2px solid;
-} */
-
-/* .form-input:-webkit-autofill {
-    background: red;
-} */
-
 .form-input:focus {
     outline-color: var(--input-focus-clr);
 }
@@ -54,11 +47,12 @@
 
 .form-input:valid:not(input[type="submit"]) {
     border: 2px solid var(--valid);
+    background-color: var(--valid-input-bg-clr);
 }
 
-.honeypot {
+/* .honeypot {
     display: none;
-}
+} */
 
 .btn {
     margin-right: auto;
@@ -68,8 +62,4 @@
     border: none;
     cursor: pointer;
     letter-spacing: 1px;
-}
-
-.btn:hover {
-    
 }

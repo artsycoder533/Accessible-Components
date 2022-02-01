@@ -18,9 +18,12 @@
             <label for="email" class="form-label">Email (required):</label>
             <input type="email" name="email" id="email" class="form-input" inputmode="email" aria-live="assertive" autocomplete="email" tabindex="0" required>
         </div>
+
         <!-- honey pot field -->
         <label for="honeypot" class="honeypot" hidden aria-hidden="true">Keep this field blank</label>
         <input type="text" hidden autocomplete="off" class="honeypot" id="honeypot" aria-hidden="true" tabindex="-1">
+        <!-- end of honey pot field -->
+        
         <div class="form-controls">
             <label for="message" class="form-label">Message (required):</label>
             <textarea name="message" id="message" class="form-input" inputmode="text" aria-live="assertive" cols="30" rows="10" tabindex="0" required></textarea>
