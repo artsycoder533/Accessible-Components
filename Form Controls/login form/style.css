@@ -58,6 +58,9 @@
     background-color: var(--valid-input-bg-clr);
 }
 
+.password {
+}
+
 .honeypot {
     display: none;
 }
@@ -78,4 +81,17 @@
 
 .btn:hover {
     
+}
+
+.password-btn {
+    display: inline-block;
+    position: relative;
+    top: -29px;
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding-right: 0.5rem;
+    text-transform: uppercase;
 }

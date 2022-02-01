@@ -25,11 +25,14 @@
 
         <div class="form-controls">
             <label for="password" class="form-label">Password (required)</label> 
-            <input type="password" name="password" id="password" autocomplete="current-password" class="form-input" required minlength="8" aria-describedby="password-validation" 
+            <input type="password" name="password" id="password" autocomplete="current-password" class="form-input password" required minlength="8"
+            maxlength="15" aria-describedby="password-validation" 
             inputmode="text" required tabindex="0"
             enterkeyhint="next">
-            <button type="button" hidden class="password-toggle" aria-controls="password" >Show</button>
-            <small id="password-validation">Password must be at least 8 characters.</small>
+            <button type="button"  class="password-btn" 
+            id="show" aria-controls="password" 
+            tabindex="0">Show</button>
+            <small id="password-validation">Password must be between 8 and 15 characters.</small>
         </div>
         <input type="submit" value="Login" class="btn" id="login">
     </form>
