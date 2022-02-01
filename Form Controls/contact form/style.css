@@ -62,7 +62,7 @@
 
 .btn {
     margin-right: auto;
-    padding: 0.5em 1em;
+    padding: 0.6em 1em;
     background-color: var(--btn-bg-clr);
     color: var(--btn-text-clr);
     border: none;
