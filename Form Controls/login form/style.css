@@ -72,3 +72,7 @@
 .btn:focus {
     outline: 4px dashed black;
 }
+
+.btn:hover {
+    
+}
