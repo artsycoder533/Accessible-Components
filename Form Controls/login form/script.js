@@ -9,7 +9,6 @@ const checkForHoneypot = ()=>{
     }
 }
 
-
 const validateForm = (e) => {
     e.preventDefault();
     checkForHoneypot();
