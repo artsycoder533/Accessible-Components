@@ -1,0 +1,11 @@
+.title {
+    text-align: center;
+}
+
+.list {
+    border: 2px solid black;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
