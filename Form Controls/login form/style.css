@@ -21,6 +21,9 @@
     display: flex;
     flex-direction: column;
     gap: var(--form-gap);
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 0 auto;
 }
 
 .form-title {
@@ -60,13 +63,13 @@
 }
 
 .btn {
-    margin-right: auto;
-    padding: 0.6em 1em;
+    padding: 0.6em 1.2em;
     background-color: var(--btn-bg-clr);
     color: var(--btn-text-clr);
     border: none;
     cursor: pointer;
     letter-spacing: 1px;
+    align-self: flex-start;
 }
 
 .btn:focus {
