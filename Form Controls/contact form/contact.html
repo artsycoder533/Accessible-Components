@@ -13,11 +13,12 @@
         <h1 class="form-title">Contact Form</h1>
         <div class="form-controls">
             <label for="name" class="form-label">Name (required):</label>
-            <input type="text" name="name" id="name" class="form-input" inputmode="text" aria-live="assertive" autocomplete="name" pattern="[A-Za-z]{1}" tabindex="0" required autofocus>
+            <input type="text" name="name" id="name" class="form-input" inputmode="text" aria-live="assertive" autocomplete="name" pattern="[A-Za-z]{1}" tabindex="0" required autofocus enterkeyhint="next">
         </div >
         <div class="form-controls">
             <label for="email" class="form-label">Email (required):</label>
-            <input type="email" name="email" id="email" class="form-input" inputmode="email" aria-live="assertive" autocomplete="email" tabindex="0" required>
+            <input type="email" name="email" id="email" class="form-input" inputmode="email" aria-live="assertive" autocomplete="email" tabindex="0" required
+            enterkeyhint="next">
         </div>
 
         <!-- honey pot field -->
@@ -27,7 +28,7 @@
         
         <div class="form-controls">
             <label for="message" class="form-label">Message (required):</label>
-            <textarea name="message" id="message" class="form-input" inputmode="text" aria-live="assertive" cols="30" rows="10" tabindex="0" required></textarea>
+            <textarea name="message" id="message" class="form-input" inputmode="text" aria-live="assertive" cols="30" rows="10" tabindex="0" required enterkeyhint="next"></textarea>
         </div>
         <input type="submit" value="Send Message" class="btn" id="submit">
     </form>
