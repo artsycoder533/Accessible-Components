@@ -1,11 +1,11 @@
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const honeypotInput = document.getElementById("honeypot");
-const form = document.querySelector(".login-form");
-const loginBtn = document.getElementById("login");
+const form = document.querySelector(".contact-form");
+const submitBtn = document.getElementById("submit");
 
 //check if filled in, reset form
-const checkForHoneypot = ()=>{
+const checkForHoneypot = () => {
     if (honeypotInput) {
         form.reset();
     }
@@ -16,7 +16,7 @@ const validateForm = (e) => {
     checkForHoneypot();
 }
 
-login.addEventListener("click", validateForm);
+submitBtn.addEventListener("click", validateForm);
 
 nameInput.addEventListener("invalid", () => {
     nameInput.setCustomValidity("Please enter a name.");

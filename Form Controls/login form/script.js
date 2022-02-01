@@ -3,7 +3,7 @@ const form = document.querySelector(".login-form");
 const loginBtn = document.getElementById("login");
 
 //check if filled in, reset form
-const checkForHoneypot = ()=>{
+const checkForHoneypot = () => {
     if (honeypotInput) {
         form.reset();
     }
@@ -14,4 +14,4 @@ const validateForm = (e) => {
     checkForHoneypot();
 }
 
-login.addEventListener("click", validateForm);
+loginBtn.addEventListener("click", validateForm);
