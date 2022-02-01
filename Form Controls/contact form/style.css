@@ -2,8 +2,11 @@
     /* colors */
     --btn-bg-clr: blue;
     --btn-text-clr: #fff;
+    --input-focus-clr: blue;
+    --valid: #008000;
+    --error: #ff0000;
 
-    /* fonts */
+    /* fonts */;
     --input-font-size: 1rem;
     --label-font-size: 1rem;
     
@@ -25,21 +28,37 @@
     flex-direction: column;
 }
 
-input,
-textarea {
+.form-label {
+    font-size: var(--label-font-size);
+}
+
+.form-input {
     padding: var(--input-padding);
-    font-size: 1rem;
+    font-size: var(--input-font-size);
 }
-input:required {
+
+/* input:required {
     border: 2px solid;
+} */
+
+/* .form-input:-webkit-autofill {
+    background: red;
+} */
+
+.form-input:focus {
+    outline-color: var(--input-focus-clr);
 }
 
-.input:user-invalid {
-    border: 2px solid red;
+.form-input:invalid {
+    border: 2px solid var(--error);
 }
 
-.input:valid {
-    border: 2px solid green;
+.form-input:valid:not(input[type="submit"]) {
+    border: 2px solid var(--valid);
+}
+
+.honeypot {
+    display: none;
 }
 
 .btn {
