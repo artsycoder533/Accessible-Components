@@ -23,6 +23,11 @@
     gap: var(--form-gap);
 }
 
+.form-title {
+    text-align: center;
+    font-weight: bold;
+}
+
 .form-controls {
     display: flex;
     flex-direction: column;

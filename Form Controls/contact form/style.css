@@ -27,6 +27,11 @@
     flex-direction: column;
 }
 
+.form-title {
+    text-align: center;
+    font-weight: bold;
+}
+
 .form-label {
     font-size: var(--label-font-size);
 }
