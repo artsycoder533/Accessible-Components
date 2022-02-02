@@ -9,15 +9,8 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <main>
-        <form
-      action=""
-      name="loginForm"
-      class="login-form"
-      autocomplete="on"
-     
-    >
-      <h1 class="form-title">Login Form</h1>
+    <h1 class="form-title">Login Form</h1>
+    <form action="" name="loginForm" class="login-form" autocomplete="on">
       <div class="form-controls">
         <label for="username" class="form-label">Username (required)</label>
         <input
@@ -83,13 +76,11 @@
           hidden
           class="password-status"
           id="password-status"
-          aria-live="polite"
+          aria-live="assertive"
         ></small>
       </div>
 
       <input type="submit" value="Login" class="btn" id="login" />
     </form>
-    </main>
-    
   </body>
 </html>
