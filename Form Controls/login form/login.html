@@ -1,40 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-    <form action="" class="login-form" autocomplete="on">
-        <h1 class="form-title">Login Form</h1>
-        <div class="form-controls">
-            <label for="username" class="form-label">Username (required)</label>
-            <input type="text" name="username" id="username" class="form-input" autofocus autocomplete="username"
-            inputmode="text" required tabindex="0"
-            enterkeyhint="next">
-        </div>
+  </head>
+  <body>
+    <form
+      action=""
+      name="loginForm"
+      class="login-form"
+      autocomplete="on"
+     
+    >
+      <h1 class="form-title">Login Form</h1>
+      <div class="form-controls">
+        <label for="username" class="form-label">Username (required)</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          class="form-input"
+          autofocus
+          autocomplete="username"
+          inputmode="text"
+          required
+          tabindex="0"
+          enterkeyhint="next"
+          pattern="[^\s]+"
+        />
+      </div>
 
-        <!-- honey pot field -->
-        <label for="honeypot" class="honeypot" hidden aria-hidden="true">Keep this field blank</label>
-        <input type="text" hidden autocomplete="off" class="honeypot" id="honeypot" aria-hidden="true" tabindex="-1">
-        <!-- end of honey pot field -->
+      <!-- honey pot field -->
+      <label for="honeypot" class="honeypot" hidden aria-hidden="true"
+        >Keep this field blank</label
+      >
+      <input
+        type="text"
+        hidden
+        autocomplete="off"
+        class="honeypot"
+        id="honeypot"
+        aria-hidden="true"
+        tabindex="-1"
+      />
+      <!-- end of honey pot field -->
 
-        <div class="form-controls">
-            <label for="password" class="form-label">Password (required)</label> 
-            <input type="password" name="password" id="password" autocomplete="current-password" class="form-input password" required minlength="8"
-            maxlength="15" aria-describedby="password-validation" 
-            inputmode="text" required tabindex="0"
-            enterkeyhint="next">
-            <button type="button"  class="password-btn" 
-            id="show" aria-controls="password" 
-            tabindex="0">Show</button>
-            <small id="password-validation">Password must be between 8 and 15 characters.</small>
-        </div>
-        <input type="submit" value="Login" class="btn" id="login">
+      <div class="form-controls">
+        <label for="password" class="form-label">Password (required)</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          autocomplete="current-password"
+          class="form-input password"
+          minlength="8"
+          maxlength="15"
+          aria-describedby="password-validation"
+          inputmode="text"
+          required
+          tabindex="0"
+          enterkeyhint="next"
+        />
+        <button
+          type="button"
+          hidden
+          class="password-btn"
+          id="show"
+          aria-controls="password"
+          tabindex="0"
+        >
+          Show
+        </button>
+        <small id="password-validation"
+          >Password must be between 8 and 15 characters.</small
+        >
+        <small
+          hidden
+          class="password-status"
+          id="password-status"
+          aria-live="polite"
+        ></small>
+      </div>
+
+      <input type="submit" value="Login" class="btn" id="login" />
     </form>
-</body>
+  </body>
 </html>
