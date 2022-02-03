@@ -8,10 +8,10 @@ const toggleNavigation = () => {
     hamburgerBtn.getAttribute("aria-label") === "Open Navigation Menu" ? hamburgerBtn.setAttribute("aria-label", "Close Navigation Menu") : hamburgerBtn.setAttribute("aria-label", "Open Navigation Menu");
     hamburgerLine.classList.toggle("rotate");
     navLinks.classList.toggle("show-menu");
+    
 }
 
-hamburgerBtn.addEventListener("click", toggleNavigation);
-hamburgerBtn.addEventListener("keyup", (e) => {
+const focusNavLink = (e) => {
     //if enter key pressed
     if (e.key === 13) {
       e.preventDefault();
@@ -43,4 +43,7 @@ hamburgerBtn.addEventListener("keyup", (e) => {
       //add focus to last menu item
       navLink[navLink.length - 1].focus();
     }
-});
+}
+
+hamburgerBtn.addEventListener("click", toggleNavigation);
+//hamburgerBtn.addEventListener("keyup", focusNavLink);
