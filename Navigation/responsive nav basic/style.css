@@ -19,9 +19,12 @@
     --hamburger-transition: all .5s ease-in-out;
 }
 
+body {
+    overflow: hidden;
+}
+
 header {
     background: var(--nav-background-clr);
-    /* height: 60px; */
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -29,18 +32,16 @@ header {
     z-index: 2;
     width: 100%;
     max-width: 1400px;
-    
 }
 
 .nav {
-    /* overflow: hidden; */
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     background: var(--nav-background-clr);
+    padding: 0.75rem;
 }
-
 
 .nav-logo-text {
     color: var(--logo-text-color);
@@ -52,18 +53,18 @@ header {
 .nav-links {
     list-style-type: none;
     transition: var(--hamburger-transition);
-    /* height: 0; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 50%;
     z-index: 1;
-    
-    /* transform: translateY(-300px); */
     background: var(--nav-background-clr);
-    /* opacity: 0; */
-    /* display: none; */
-    /* border: 1px solid red; */
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    transform: translateX(100%);
+    gap: 2rem;
+    
 }
 
 .nav-link {
@@ -71,7 +72,7 @@ header {
     color: var(--nav-link-clr);
     display: block;
     padding: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     /* outline: 3px solid red; */
 }
 
@@ -101,6 +102,7 @@ header {
 [aria-current=page] {
     color: var(--logo-text-color);
     border-left: 3px solid var(--logo-text-color);
+    margin-left: 2rem;
 }
 
 /* hamburger button */
@@ -114,6 +116,7 @@ header {
     padding: 0;
     justify-content: center;
     cursor: pointer;
+    z-index: 3;
 }
 
 .hamburger-line {
@@ -163,28 +166,30 @@ header {
 
 /* open menu */
 .nav-links.show-menu {
-   
     transition: var(--hamburger-transition);
-    z-index: 1;
-
-    height: auto;
-    display: flex;
-    
+    transform: translateX(0);
 }
 
-/* @media screen and (min-width: 768px){
+@media screen and (min-width: 768px){
     .hamburger {
         display: none;
     }
 
     .nav {
-        display: flex;
-        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
     }
 
     .nav-links {
+        transform: translateX(0);
+        position: initial;
         height: auto;
-        transform: translateY(0);
         flex-direction: row;
+        justify-content: flex-end;
     }
-} */
+
+    [aria-current=page] {
+        margin-left: 0;
+        border-left: 0;
+    }
+}
