@@ -1,0 +1,52 @@
+:root {
+    /* colors */
+    --nav-background-clr: #000;
+    --nav-link-clr: #fffafa;
+    --logo-text-color: #07f607;
+    
+    /* fonts */;
+    --nav-font-size: 1rem;
+
+    /* utilities */
+    --gap1: 1rem;
+}
+
+.nav {
+    background: var(--nav-background-clr);
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+
+.nav-logo-text {
+    color: var(--logo-text-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    /* gap: 1rem; */
+    height: 100%;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--nav-link-clr);
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    padding: 1rem;
+}
+
+.nav-link:focus {
+    color: red;
+}
+
+.nav-link:active {
+    border: 4px dotted var(--nav-logo-text);
+}
+
+.nav-link:hover {
+    
+}
