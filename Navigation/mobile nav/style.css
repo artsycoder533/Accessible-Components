@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --nav-background-clr: #000;
+    --nav-link-clr: #fffafa;
+    --logo-text-color: #07f607;
+    --hamburger-btn-clr: #07f607;
+    
+    /* fonts */;
+    --nav-font-size: 1rem;
+
+    /* utilities */
+    --gap1: 1rem;
+    --hamburger-transition: all .5s ease-in-out;
+}
+
+.header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    border: 1px solid blue;
+}
+
+.nav-logo {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    /* width: 100%; */
+    justify-content: flex-end;
+    border: 1px solid red;
+}
+
+.nav-logo-text {
+    color: var(--logo-text-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: none;
+}
+
+.nav-link {
+    /* color: var(--nav-link-clr); */
+    text-decoration: none;
+    /* display: block; */
+    /* height: 100%;
+    padding: 1rem; */
+}
+
+.hamburger {
+    border: 1px solid transparent;
+    background: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content: center;
+}
+
+.hamburger-line {
+    height: 4px;
+    background: var(--hamburger-btn-clr);
+    width: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    transition: var(--hamburger-transition);
+}
+
+.hamburger-line::before,
+.hamburger-line::after {
+    height: 4px;
+    width: 40px;
+    background: var(--hamburger-btn-clr);
+    position: absolute;
+    border-radius: 3px;
+    transition: var(--hamburger-transition);
+}
+
+.hamburger-line::before {
+    content: '';
+    transform: translateY(-12px);
+}
+
+.hamburger-line::after {
+    content: '';
+    transform: translateY(12px);
+}
+
+.hamburger-line.rotate::before {
+    transform: rotate(45deg);
+}
+
+.hamburger-line.rotate::after {
+    transform: rotate(-45deg);
+}
+
+.hamburger-line.rotate {
+    background: transparent;
+}
+
