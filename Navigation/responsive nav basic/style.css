@@ -28,20 +28,19 @@ header {
     position: fixed;
     z-index: 2;
     width: 100%;
+    max-width: 1400px;
+    
 }
 
 .nav {
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: var(--nav-background-clr);
 }
 
-.container {
-    display: flex;
-    border: 1px solid;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    
-}
 
 .nav-logo-text {
     color: var(--logo-text-color);
@@ -52,17 +51,19 @@ header {
 
 .nav-links {
     list-style-type: none;
-    height: 0;
     transition: var(--hamburger-transition);
-    
-  
-    overflow: hidden;
+    /* height: 0; */
     display: flex;
     flex-direction: column;
-    /* gap: 1rem; */
-    /* align-items: center; */
     justify-content: center;
-    transform: translateY(500px);
+    width: 100%;
+    z-index: 1;
+    
+    /* transform: translateY(-300px); */
+    background: var(--nav-background-clr);
+    /* opacity: 0; */
+    /* display: none; */
+    /* border: 1px solid red; */
 }
 
 .nav-link {
@@ -71,19 +72,35 @@ header {
     display: block;
     padding: 1rem;
     font-size: 1.2rem;
-    outline: none;
+    /* outline: 3px solid red; */
 }
 
-.nav-link:active,
+
 .nav-link:hover {
-    color: var(--logo-text-color);
-    font-weight: bold;
+    /* color: var(--logo-text-color);
+    /* font-weight: bold; */
+    text-decoration: underline; 
+    /* background: white; */
+    color: black;
 }
 
 .nav-link:focus {
-    color: var(--logo-text-color);
-    border: 3px dotted red;
+    /* color: var(--logo-text-color); */
+    outline: 3px dotted red;
     padding: 14px;
+}
+
+.nav-link:active {
+    background: #494949;
+}
+
+.nav-link:visited {
+    color: var(--nav-link-clr);
+}
+
+[aria-current=page] {
+    color: var(--logo-text-color);
+    border-left: 3px solid var(--logo-text-color);
 }
 
 /* hamburger button */
@@ -146,11 +163,13 @@ header {
 
 /* open menu */
 .nav-links.show-menu {
-    height: 250px;
+   
     transition: var(--hamburger-transition);
     z-index: 1;
-    overflow:visible;
-    transform:translateY(0);
+
+    height: auto;
+    display: flex;
+    
 }
 
 /* @media screen and (min-width: 768px){
