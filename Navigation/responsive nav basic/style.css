@@ -194,3 +194,11 @@ header {
         border-left: 0;
     }
 }
+
+@media (forced-colors: active){
+    .hamburger-line,
+    .hamburger-line::before,
+    .hamburger-line::after {
+        forced-color-adjust: none;
+    }
+}
