@@ -31,7 +31,7 @@ header {
     position: fixed;
     z-index: 2;
     width: 100%;
-    max-width: 1400px;
+    justify-content: center;
 }
 
 .nav {
@@ -41,6 +41,7 @@ header {
     flex-wrap: wrap;
     background: var(--nav-background-clr);
     padding: 0.75rem;
+    max-width: 1400px;
 }
 
 .nav-logo-text {
