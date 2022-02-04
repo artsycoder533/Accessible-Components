@@ -2,6 +2,7 @@ const hamburgerBtn = document.getElementById("hamburger");
 const hamburgerLine = document.querySelector(".hamburger-line");
 const navLinks = document.getElementById("navLinks");
 const navLink = document.querySelectorAll(".nav-link");
+let position = 0;
 
 const toggleNavigation = () => {
     hamburgerBtn.getAttribute("aria-expanded") === "false" ? hamburgerBtn.setAttribute("aria-expanded", "true") : hamburgerBtn.setAttribute("aria-expanded", "false");
@@ -9,41 +10,25 @@ const toggleNavigation = () => {
     hamburgerLine.classList.toggle("rotate");
     navLinks.classList.toggle("show-menu");
     
+  //change tab-index to -1 for all links except for first
+  navLink.forEach((link, index) => {
+    if (index > 0) {
+      link.setAttribute("tab-index", "-1");
+    }
+  });
 }
 
 const focusNavLink = (e) => {
-    //if enter key pressed
-    if (e.key === 13) {
-      e.preventDefault();
-      hamburgerBtn.click();
-      //add focus to first menu item
-      navLink[0].focus();
-    }
-
-    //if spacebar pressed
-    else if (e.key === 32) {
-      e.preventDefault();
-      hamburgerBtn.click();
-      //add focus to first menu item
-      navLink[0].focus();
-    }
+//if hamburger is expanded,
+  //go thru all nav links and add focus
+  //once index length is reached add focus back to hamburger button?
+  console.log(e.key);
 
     //if down arrow pressed
-    else if (e.key === 40) {
-      e.preventDefault();
-      hamburgerBtn.click();
-      //add focus to last menu item
-      navLink[0].focus();
-    }
+  if (e.key === "ArrowDown") {
 
-    //if up arrow pressed
-    else if (e.key === 40) {
-      e.preventDefault();
-      hamburgerBtn.click();
-      //add focus to last menu item
-      navLink[navLink.length - 1].focus();
-    }
+  }
 }
 
 hamburgerBtn.addEventListener("click", toggleNavigation);
-//hamburgerBtn.addEventListener("keyup", focusNavLink);
+hamburgerBtn.addEventListener("keyup", focusNavLink);

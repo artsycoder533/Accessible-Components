@@ -118,6 +118,11 @@ header {
     justify-content: center;
     cursor: pointer;
     z-index: 3;
+    
+}
+
+.hamburger:focus {
+    outline: 3px dashed white;
 }
 
 .hamburger-line {
@@ -130,6 +135,7 @@ header {
     align-items: center;
     border-radius: 6px;
     transition: var(--hamburger-transition);
+    
 }
 
 .hamburger-line::before,
@@ -138,7 +144,7 @@ header {
     width: 40px;
     background: var(--hamburger-btn-clr);
     position: absolute;
-    border-radius: 3px;
+    border-radius: 6px;
     transition: var(--hamburger-transition);
 }
 
@@ -196,9 +202,14 @@ header {
 }
 
 @media (forced-colors: active){
-    .hamburger-line,
-    .hamburger-line::before,
-    .hamburger-line::after {
-        forced-color-adjust: none;
+    .hamburger-line::before
+     {
+        content: 'Menu';
     }
+
+    .hamburger-line.rotate::before,     
+    .hamburger-line.rotate::after {
+        transform: rotate(0);
+    }
+
 }
